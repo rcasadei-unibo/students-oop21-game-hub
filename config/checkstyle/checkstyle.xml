@@ -29,6 +29,10 @@
 		<property name="lineSeparator" value="lf" />
 	</module>
 
+	<module name="LineLength">
+		<property name="max" value="130"/>
+	</module>
+
 	<property name="severity" value="warning" />
 
 	<!-- Checks that property files contain the same keys. -->
@@ -64,13 +68,6 @@
 		<property name="message"
 			value="Do not use @author. Changes and authors are tracked by the content manager." />
 	</module>
-	<module name="RegexpSingleline">
-		<property name="severity" value="warning" />
-		<property name="format" value="@version" />
-		<property name="fileExtensions" value="java,xtend,scala,kt" />
-		<property name="message"
-			value="Do not use @version. Changes and authors are tracked by the content manager." />
-	</module>
 
 	<module name="TreeWalker">
 		<module name="SuppressionCommentFilter">
@@ -81,10 +78,10 @@
 		<!-- Checks for Javadoc comments. -->
 		<!-- See http://checkstyle.sf.net/config_javadoc.html -->
 		<module name="JavadocMethod">
-			<property name="accessModifiers" value="public, protected" />
+			<property name="scope" value="protected" />
 		</module>
 		<module name="JavadocType">
-			<property name="severity" value="error" />
+			<property name="severity" value="warning" />
 			<property name="scope" value="protected" />
 		</module>
 		<module name="JavadocVariable">
@@ -172,8 +169,8 @@
 		<module name="ArrayTypeStyle" />
 		<module name="FinalParameters" />
 		<module name="TodoComment">
-            <property name="severity" value="info" />
-        </module>
+			<property name="severity" value="info" />
+		</module>
 		<module name="UpperEll" />
 	</module>
 </module>
